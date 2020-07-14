@@ -5,6 +5,7 @@ var http = require('http').Server(app);
 var io = require('socket.io')(http);
 var port = process.env.PORT || 3000;
 
+const Gpio = require('pigpio').Gpio;
 // we wont need this anymore because we are using mySQL not mongoDB
 ////////////////////////////////////
 var mongoose = require('mongoose');
