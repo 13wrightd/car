@@ -6,6 +6,15 @@ var io = require('socket.io')(http);
 var port = process.env.PORT || 3000;
 
 const Gpio = require('pigpio').Gpio;
+const led = new Gpio(17, {mode: Gpio.OUTPUT});
+
+const led2 = new Gpio(18, {mode: Gpio.OUTPUT});
+const in1 = new Gpio(22, {mode: Gpio.OUTPUT});
+const in2 = new Gpio(23, {mode: Gpio.OUTPUT});
+const in3 = new Gpio(24, {mode: Gpio.OUTPUT});
+const in4 = new Gpio(25, {mode: Gpio.OUTPUT});
+
+
 // we wont need this anymore because we are using mySQL not mongoDB
 ////////////////////////////////////
 var mongoose = require('mongoose');
