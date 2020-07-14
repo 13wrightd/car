@@ -11,49 +11,27 @@
 </head>
 
 
-<body class = "w3-gray">
-  <div class="w3-container w3-teal">
-    <h1>TMinder</h1>
+<body style="background-color:grey">
+  <div style="background-color:blue;height:10vh">
+    <h1 style="text-align:center">Car Control</h1>
   </div>
 
-  <div class = "w3-center">
-   <button onclick="document.getElementById('pn').style.display='block'" class="w3-button w3-green w3-large w3-center">See Reminders</button>
-  </div>
 
-  <div id="pn" class="w3-modal">
-    <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="max-width:600px">
-  
-      <div class="w3-center"><br>
-        <span onclick="document.getElementById('pn').style.display='none'" class="w3-button w3-xlarge w3-transparent w3-display-topright" title="Close">×</span>
-        <img src="/images/phone.png" alt="phone" style="width:30%" class="w3-margin-top">
-      </div>
-
-      <form class="w3-container" action="/pages/calender.html">
-        <div class="w3-section">
-          <label><b>Phone Number</b></label>
-          <input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Enter Phonenumber" name="phonenumber" required>
-          <button class="w3-button w3-block w3-green w3-section w3-padding" type="submit">See Reminders</button>
+  <div>
+      <div style="width:60%; margin:auto; height:80vh; background:white;">
+        <div style="width:60%; margin:auto; height:80vh; background:white;">
+          <input style="width: 100px; text-align:center; font-size:50px;float:left; height:100px; background:gray; margin:10px" type="text" id="left" value="60">
+          <div style="width: 100px; text-align:center; float:left; height:100px; background:gray; margin:10px" class="in" id= "in1">0</div>
+          <div style="width: 100px; text-align:center; float:left; height:100px; background:gray; margin:10px" class="in" id= "in2">1</div>
+          <div style="width: 100px; text-align:center; float:left; height:100px; background:gray; margin:10px" class="in" id= "in3">0</div>
+          <div style="width: 100px; text-align:center; float:left; height:100px; background:gray; margin:10px" class="in" id= "in4">1</div>
+          <input style="width: 100px; text-align:center; font-size:50px; float:left; height:100px; background:gray; margin:10px" type="text" id="right" value="60">
         </div>
-      </form>
-
-    </div>
-  </div>
-
-  <br>
-
-  <div class = "w3-center">
-    <a class="w3-bar-item w3-button w3-center w3-blue" href="/pages/calender.html">Calender Beta</a>
+      </div>
   </div>
 
   
 
-  <br>  
-
-  <br>  
-
-  <br>  
-
-  <br>
 
   
 

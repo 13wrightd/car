@@ -6,64 +6,55 @@ app.controller('myCtrl', function($scope) {
 	    $scope.searchtext= "";
 
 	});
-$(document).ready(function(){ //angular
-
-
-});
 
 $(document).ready(function(){
-	console.log('document ready');
-
-
-
-// itemID: String,
-// 	description: String,
-// 	URL: String,
-// 	name: String,
-//     numberOfRatings: number,
-// 	rating: number,
-// 	dateAdded:
-
-		
-	$('#button').click(function(){
-	var msg=
-	{
-  		itemID: Math.floor(Math.random()*10000000000000000),
-  		description: $('#description').val(),
-  		URL: $('#URL').val(),
-  		name: $('#name').val(),
-  		rating: $('#rating').val(),
-  		categoryID: $('#categoryID').val(),
-  		numberOfRatings: $('#numberOfRatings').val()
-	}
-  		console.log(msg);
-		socket.emit('button clicked', msg);
+	console.log('document ready');		
+	$('.in').click(function(){
+		console.log("input clicked");
+		if($(this).text()=="0"){
+			$(this).text("1");
+		}
+		else{
+			$(this).text("0");
+		}
+		data={
+			left:$('#left').val(),
+			right:$('#right').val(),
+			in1:$('#in1').text(),
+			in2:$('#in2').text(),
+			in3:$('#in3').text(),
+			in4:$('#in4').text()
+		}
+		socket.emit('control', data);
 	});
 
-	$('#refreshButton').click(function(){
-		socket.emit('get items');
+	$("#left").change(function() {
+		data={
+			left:$('#left').val(),
+			right:$('#right').val(),
+			in1:$('#in1').text(),
+			in2:$('#in2').text(),
+			in3:$('#in3').text(),
+			in4:$('#in4').text()
+		}
+		socket.emit('control', data);
 	});
-
-	// $('#messageField').keypress(function(event){
-	// 	var msg=
-	// 	{
-	 //  			first: $('#firstNameField').val(),
-	 //  			last: $('#lastNameField').val(),
-	 //  			message: $('#messageField').val()
-	// 	}
-		
-	// 	if(event.which == '13'){
-	// 		socket.emit('button clicked', msg);
-	// 	}
-	// });
+	$("#right").change(function() {
+		data={
+			left:$('#left').val(),
+			right:$('#right').val(),
+			in1:$('#in1').text(),
+			in2:$('#in2').text(),
+			in3:$('#in3').text(),
+			in4:$('#in4').text()
+		}
+		socket.emit('control', data);
+	});
 
 	socket.on('button was clicked', function(msg){
 		console.log('successful add');
 		//$('#chat').append('<li>'+msg.first+ " " + msg.last+ ": " +msg.message+'</li>');
 	});
-
-
-	socket.on('item list', console.log('itemList'));
 });
 
 
