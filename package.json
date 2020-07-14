@@ -1,0 +1,41 @@
+{
+  "name": "tubify",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WestBrian/Tubify.git"
+  },
+  "author": "Brian West & Dan Wright",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WestBrian/Tubify/issues"
+  },
+  "homepage": "https://github.com/WestBrian/Tubify#readme",
+  "dependencies": {
+    "body-parser": "^1.14.1",
+    "connect-flash": "^0.1.1",
+    "express": "^4.13.3",
+    "express-session": "^1.12.1",
+    "jade": "~1.11.0",
+    "mongoose": "^4.1.9",
+    "passport": "^0.3.0",
+    "passport-local": "^1.0.0",
+    "passport-local-mongoose": "^3.1.0",
+    "pigpio": "^3.2.3",
+    "socket.io": "^1.3.7"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-concurrent": "^2.0.3",
+    "grunt-contrib-jade": "^0.15.0",
+    "grunt-contrib-stylus": "^0.22.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-jade": "^0.5.1",
+    "grunt-nodemon": "^0.4.0"
+  }
+}
