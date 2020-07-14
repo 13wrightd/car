@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- stylesheets here -->
+  <link href="/css/main.css" rel="stylesheet">
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+  <link rel="stylesheet" href="/css/w3.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+</head>
+
+
+<body class = "w3-gray">
+  <div class="w3-container w3-teal">
+    <h1>TMinder</h1>
+  </div>
+
+  <div class = "w3-center">
+   <button onclick="document.getElementById('pn').style.display='block'" class="w3-button w3-green w3-large w3-center">See Reminders</button>
+  </div>
+
+  <div id="pn" class="w3-modal">
+    <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="max-width:600px">
+  
+      <div class="w3-center"><br>
+        <span onclick="document.getElementById('pn').style.display='none'" class="w3-button w3-xlarge w3-transparent w3-display-topright" title="Close">×</span>
+        <img src="/images/phone.png" alt="phone" style="width:30%" class="w3-margin-top">
+      </div>
+
+      <form class="w3-container" action="/pages/calender.html">
+        <div class="w3-section">
+          <label><b>Phone Number</b></label>
+          <input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Enter Phonenumber" name="phonenumber" required>
+          <button class="w3-button w3-block w3-green w3-section w3-padding" type="submit">See Reminders</button>
+        </div>
+      </form>
+
+    </div>
+  </div>
+
+  <br>
+
+  <div class = "w3-center">
+    <a class="w3-bar-item w3-button w3-center w3-blue" href="/pages/calender.html">Calender Beta</a>
+  </div>
+
+  
+
+  <br>  
+
+  <br>  
+
+  <br>  
+
+  <br>
+
+  
+
+
+
+  <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+  <!-- javascript down here, import jquery first ^        -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.3/socket.io.js"></script> 
+  <script src="/js/main.js"></script>
+</body>
+</html>
